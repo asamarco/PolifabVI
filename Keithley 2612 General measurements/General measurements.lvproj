@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="23008000">
+<Project Type="Project" LVVersion="18008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Property Name="NI.Project.SaveVersion" Type="Str">Editor version</Property>
@@ -16,7 +16,7 @@
 		<Item Name="General measurements.vi" Type="VI" URL="../General measurements.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
-				<Item Name="Keithley 2600 Series.lvlib" Type="Library" URL="/&lt;instrlib&gt;/Keithley 2600 Series old/Keithley 2600 Series.lvlib"/>
+				<Item Name="Keithley 2600 Series.lvlib" Type="Library" URL="../../../../../../../Program Files/National Instruments/LabVIEW 2023/instr.lib/Keithley 2600 Series old/Keithley 2600 Series.lvlib"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
@@ -52,7 +52,6 @@
 				<Property Name="App_INI_aliasGUID" Type="Str">{713D58D7-316B-4CB5-81D6-EE94C48BFD4D}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{9F240252-2B31-4815-A8D4-E0BB8F01D52C}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="App_serverType" Type="Int">1</Property>
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{BB543474-788D-46F3-9988-43DFE50EBBCE}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">General measurements v1</Property>
