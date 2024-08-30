@@ -11,6 +11,8 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Preset.vi" Type="VI" URL="../SubVI/Preset.vi"/>
+		<Item Name="leybold QMH.vi" Type="VI" URL="../leybold QMH.vi"/>
 		<Item Name="leybold.vi" Type="VI" URL="../leybold.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -22,6 +24,7 @@
 				<Item Name="DialogType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogType.ctl"/>
 				<Item Name="DialogTypeEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogTypeEnum.ctl"/>
 				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
+				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
@@ -54,6 +57,7 @@
 			<Item Name="PFG600 5Byte checksum.vi" Type="VI" URL="../lib/PFG600 5Byte checksum.vi"/>
 			<Item Name="PFG600 update value.vi" Type="VI" URL="../lib/PFG600 update value.vi"/>
 			<Item Name="PR4000 init.vi" Type="VI" URL="../lib/PR4000 init.vi"/>
+			<Item Name="QMH Fundamentals - Message Cluster.ctl" Type="VI" URL="/usr/local/natinst/LabVIEW-2023-64/examples/Design Patterns/Queued Message Handler/support/QMH Fundamentals - Message Cluster.ctl"/>
 			<Item Name="Value Limiter.vi" Type="VI" URL="../lib/Value Limiter.vi"/>
 			<Item Name="Value adder.vi" Type="VI" URL="../lib/Value adder.vi"/>
 			<Item Name="Value setter.vi" Type="VI" URL="../lib/Value setter.vi"/>
@@ -74,7 +78,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">/config/builds</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{55F1F077-48B6-11EE-B351-48210B553E6F}</Property>
-				<Property Name="Bld_version.build" Type="Int">25</Property>
+				<Property Name="Bld_version.build" Type="Int">29</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Leybold.exe</Property>
@@ -85,18 +89,65 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">/config/builds/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
-				<Property Name="SourceCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{07D3710A-ECF4-11EE-A7C6-0242AC120002}</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="Source[0].itemID" Type="Str">{9CE7402C-6510-11EF-A7C6-0242AC120002}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/leybold.vi</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/leybold QMH.vi</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/leybold.vi</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Leybold</Property>
 				<Property Name="TgtF_internalName" Type="Str">Leybold</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright 2023 </Property>
 				<Property Name="TgtF_productName" Type="Str">Leybold</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{55F1EFCE-48B6-11EE-B351-48210B553E6F}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">Leybold.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Leybold QMH" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{14555A5C-67A9-11EF-A973-0242AC120002}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{145558C5-67A9-11EF-A973-0242AC120002}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_serverType" Type="Int">0</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{14553DE5-67A9-11EF-A973-0242AC120002}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Leybold QMH</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/config/builds</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{1455396C-67A9-11EF-A973-0242AC120002}</Property>
+				<Property Name="Bld_version.build" Type="Int">30</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Destination[0].destName" Type="Str">Leybold.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">/config/builds/Leybold QMH.exe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">/config/builds/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0EA6D079-67A9-11EF-A7C6-0242AC120002}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/leybold QMH.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/leybold.vi</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Leybold</Property>
+				<Property Name="TgtF_internalName" Type="Str">Leybold</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright 2023 </Property>
+				<Property Name="TgtF_productName" Type="Str">Leybold</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{14555629-67A9-11EF-A973-0242AC120002}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">Leybold.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
