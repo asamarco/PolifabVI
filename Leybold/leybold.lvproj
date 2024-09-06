@@ -57,10 +57,15 @@
 			<Item Name="PFG600 5Byte checksum.vi" Type="VI" URL="../lib/PFG600 5Byte checksum.vi"/>
 			<Item Name="PFG600 update value.vi" Type="VI" URL="../lib/PFG600 update value.vi"/>
 			<Item Name="PR4000 init.vi" Type="VI" URL="../lib/PR4000 init.vi"/>
+			<Item Name="Prepare metrics.vi" Type="VI" URL="../SubVI/Prepare metrics.vi"/>
 			<Item Name="QMH Fundamentals - Message Cluster.ctl" Type="VI" URL="/usr/local/natinst/LabVIEW-2023-64/examples/Design Patterns/Queued Message Handler/support/QMH Fundamentals - Message Cluster.ctl"/>
+			<Item Name="Send Graphite Metric.vi" Type="VI" URL="../../SubVI library/Send Graphite Metrics/Send Graphite Metric.vi"/>
+			<Item Name="Send Graphite Metrics (Polymorphic).vi" Type="VI" URL="../../SubVI library/Send Graphite Metrics/Send Graphite Metrics (Polymorphic).vi"/>
+			<Item Name="Send Graphite Metrics.vi" Type="VI" URL="../../SubVI library/Send Graphite Metrics/Send Graphite Metrics.vi"/>
 			<Item Name="Value Limiter.vi" Type="VI" URL="../lib/Value Limiter.vi"/>
 			<Item Name="Value adder.vi" Type="VI" URL="../lib/Value adder.vi"/>
 			<Item Name="Value setter.vi" Type="VI" URL="../lib/Value setter.vi"/>
+			<Item Name="global variables.vi" Type="VI" URL="../global variables.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Leybold" Type="EXE">
@@ -122,7 +127,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">/config/builds</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1455396C-67A9-11EF-A973-0242AC120002}</Property>
-				<Property Name="Bld_version.build" Type="Int">38</Property>
+				<Property Name="Bld_version.build" Type="Int">40</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Leybold.exe</Property>
